@@ -8,6 +8,15 @@ body {
   height: 100vh;
 }
 
+/* Adjusting for smaller screens */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
 .container {
   width: 35rem;
   height: 25rem;
@@ -33,14 +42,14 @@ body {
 }
 
 span {
-  font-size: 100px; /* Big text */
-  color: #2b2a2a; /* Gray color */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish, modern font */
-  text-shadow: 2px 2px 4px #d9d9d9; /* Subtle shadow for depth */
-  letter-spacing: 5px; /* Space out the letters a bit */
-  margin: 0; /* Reset margin */
-  position: absolute; /* Positioning relative to the nearest positioned ancestor */
-  top: 50%; /* 50% from the top of the container */
-  left: 50%; /* 50% from the left of the container */
-  transform: translate(-50%, -50%); /* Offset the element by half of its width and height */
+  font-size: 100px;
+  color: #2b2a2a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 4px #d9d9d9;
+  letter-spacing: 5px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

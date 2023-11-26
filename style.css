@@ -1,24 +1,17 @@
 body {
-  background: url('Assets/render.png');
-  background-size: cover;
-  background-attachment: fixed;
+  background: url('Assets/render.png') no-repeat center center fixed; 
+  background-size: cover; /* Default setting for larger screens */
   display: grid;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
-/* Smaller screens, typically phones */
-@media (max-width: 600px) {
+/* Adjust background for smaller screens (mobile devices) */
+@media (max-width: 768px) {
   body {
-    background-size: contain; /* Change background size for smaller screens */
-  }
-}
-
-/* Medium screens, typically tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
-  body {
-    background-size: 150%; /* Adjust size as needed */
+    background-size: auto 100%; /* Adjust height to 100%, width automatically scales */
+    background-position: top center; /* Adjust if you want to focus on a specific part */
   }
 }
 

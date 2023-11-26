@@ -1,12 +1,13 @@
 body {
   background: url('Assets/render.png') no-repeat center center fixed;
   background-size: cover; /* Maintain this for larger screens */
-  display: grid;
-  align-items: start; /* Align to the top for mobile */
-  justify-content: center;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   min-height: 100vh; /* Minimum height */
   width: 100%; /* Full width */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0; /* Remove default margin */
 }
 
 /* Adjust layout for smaller screens (mobile devices) */
@@ -14,12 +15,6 @@ body {
   body {
     background-size: auto 100%; /* Adjust background size */
     background-attachment: scroll; /* Make background scroll with the page */
-  }
-
-  .container {
-    width: 90%; /* Adjust width for mobile screens */
-    margin: 10px auto; /* Center the container with margin */
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
   }
 }
 
@@ -32,6 +27,7 @@ body {
   overflow: hidden;
   border-radius: 5px;
   z-index: 1;
+  /* No additional positioning needed, flexbox handles it */
 }
 
 .container:before {
@@ -58,10 +54,4 @@ span {
   top: 50%; /* 50% from the top of the container */
   left: 50%; /* 50% from the left of the container */
   transform: translate(-50%, -50%); /* Offset the element by half of its width and height */
-}
-
-@media (max-width: 768px) {
-  span {
-    font-size: 2rem; /* Smaller text for mobile devices */
-  }
 }

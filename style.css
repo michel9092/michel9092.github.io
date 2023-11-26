@@ -1,0 +1,46 @@
+body {
+  background: url('Assets/render.png');
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 35rem;
+  height: 25rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+  position: relative;
+  background: inherit;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(1px);
+  margin: -20px;
+  z-index: -1;
+}
+
+span {
+  font-size: 100px; /* Big text */
+  color: #2b2a2a; /* Gray color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish, modern font */
+  text-shadow: 2px 2px 4px #d9d9d9; /* Subtle shadow for depth */
+  letter-spacing: 5px; /* Space out the letters a bit */
+  margin: 0; /* Reset margin */
+  position: absolute; /* Positioning relative to the nearest positioned ancestor */
+  top: 50%; /* 50% from the top of the container */
+  left: 50%; /* 50% from the left of the container */
+  transform: translate(-50%, -50%); /* Offset the element by half of its width and height */
+}
